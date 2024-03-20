@@ -1,0 +1,10 @@
+/* 特別な演出のためのスタイル */
+.celebrate {
+    animation: celebrationAnimation 1s forwards;
+}
+
+@keyframes celebrationAnimation {
+    0% { background-color: white; }
+    50% { background-color: rgb(158, 203, 255); }
+    100% { background-color: white; }
+}

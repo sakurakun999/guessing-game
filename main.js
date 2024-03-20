@@ -33,6 +33,8 @@ function checkNumber() {
 
     if (eats === 3) {
         document.getElementById("result").innerText = "おめでとう！相手の数字を当てました！";
+        // ここに特別な演出を追加します。
+        document.body.classList.add("celebrate"); // bodyにcelebrateクラスを追加
     }
     else {
         document.getElementById("result").innerText = eats + "イート・" + bites + "バイト";
