@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>3桁数字ゲーム</title>
+    <title>ヌメロン</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js" defer></script>
@@ -19,12 +19,13 @@
         <p>あなたがコールしたい番号を入力してください。</p>
         <div class="field">
             <div class="control">
-                <input type="text" id="inputNumber" class="input" placeholder="3桁・重複なし・0あり">
+                <input type="text" id="inputNumber" class="input is-rounded is-medium" placeholder="3桁・重複なし・0あり">
             </div>
         </div>
         <button class="button is-large is-fullwidth is-link" onclick="checkNumber()">数字を送信</button>
-
-        <div id="result" class="content"></div>
+        <div class="box">
+            <div id="result" class="content is-size-4 has-text-centered	"></div>
+        </div>
     </section>
 </body>
 
