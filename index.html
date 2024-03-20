@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>3桁数字ゲーム</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">3桁数字ゲーム</h1>
+            <p>相手の3桁の数字を当ててください！</p>
+
+            <div class="field">
+                <div class="control">
+                    <input type="text" id="inputNumber" class="input" placeholder="3桁の数字を入力してください">
+                </div>
+            </div>
+            <button class="button is-primary" onclick="checkNumber()">数字を送信</button>
+
+            <div id="result" class="content"></div>
+        </div>
+    </section>
+</body>
+</html>
