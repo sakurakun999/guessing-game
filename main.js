@@ -15,7 +15,7 @@ function checkNumber() {
     let guess = document.getElementById("inputNumber").value;
 
     if (guess.length !== 3 || isNaN(guess)) {
-        document.getElementById("result").innerText = "3桁の数字を入力してください！";
+        document.getElementById("result").innerText = "3桁の数字を入力してください!";
         return;
     }
 
