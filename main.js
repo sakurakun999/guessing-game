@@ -4,6 +4,8 @@ function generateNumber() {
     // input要素リセット
         var inputNumber = document.getElementById("inputNumber");
         inputNumber.value = ""; // Clear the input value
+    // boxリセット
+    document.getElementById("result").innerText = 'Fight!';
     // 数値設定
     let num = "";
     while (num.length < 3) {
