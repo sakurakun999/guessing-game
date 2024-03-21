@@ -1,6 +1,10 @@
 let answer = generateNumber();
 
 function generateNumber() {
+    // input要素リセット
+        var inputNumber = document.getElementById("inputNumber");
+        inputNumber.value = ""; // Clear the input value
+    // 数値設定
     let num = "";
     while (num.length < 3) {
         let newNum = Math.floor(Math.random() * 10);
