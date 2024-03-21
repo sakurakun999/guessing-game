@@ -40,3 +40,9 @@ function checkNumber() {
         document.getElementById("result").innerText = eats + "イート・" + bites + "バイト";
     }
 }
+
+function convertToHalfWidth(input) {
+    input.value = input.value.replace(/[０-９]/g, function (s) {
+        return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    });
+}
