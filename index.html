@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>数字当てゲーム</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="main.js" defer></script>
     <link rel=”icon” href="favicon.ico">
@@ -39,6 +39,13 @@
         <div class="block has-text-right">
             <button class="button is-danger is-outlined" onclick="generateNumber(); alert('リセットしました。')">値をリセット</button>
         </div>
+        <table id="historyTable" class="table is-size-3">
+            <tr>
+                <th>入力</th>
+                <th>イート</th>
+                <th>バイト</th>
+            </tr>
+        </table>
     </section>
     <footer class="footer has-background-grey-lighter">
         <!-- containerクラスでコンテンツを囲み、is-fluidクラスで幅を画面いっぱいにする -->

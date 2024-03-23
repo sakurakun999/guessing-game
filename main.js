@@ -59,6 +59,7 @@ function checkNumber() {
         loadsee();
         document.getElementById("result").innerText = eats + "イート・" + bites + "バイト";
         history.push({ guess: guess, eats: eats, bites: bites }); // 現在の入力とイート・バイト数を履歴に追加
+        displayHistory(); // 履歴を表示する
     }
 }
 
@@ -99,4 +100,16 @@ function loadsee() {
 
     document.getElementById("count").innerText = input_count + "コール";
 
+}
+
+function displayHistory() {
+    let table = document.getElementById("historyTable");
+    let row = table.insertRow(-1);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+    let latestGuess = history[history.length - 1];
+    cell1.innerHTML = latestGuess.guess;
+    cell2.innerHTML = latestGuess.eats;
+    cell3.innerHTML = latestGuess.bites;
 }
