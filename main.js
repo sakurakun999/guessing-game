@@ -2,8 +2,8 @@ let answer = generateNumber();
 
 function generateNumber() {
     // input要素リセット
-        var inputNumber = document.getElementById("inputNumber");
-        inputNumber.value = ""; // Clear the input value
+    var inputNumber = document.getElementById("inputNumber");
+    inputNumber.value = ""; // Clear the input value
     // boxリセット
     document.getElementById("result").innerText = 'Fight!';
     // 数値設定
@@ -21,9 +21,15 @@ function checkNumber() {
     let guess = document.getElementById("inputNumber").value;
 
     if (guess.length !== 3 || isNaN(guess)) {
-        loadsee()
+        loadsee();
         document.getElementById("result").innerText = "3桁の数字を入力してください!";
         return;
+    }
+
+    if (hasDuplicate(guess)) {
+        loadsee();
+        document.getElementById("result").innerText = "数字が重複しています";
+        return
     }
 
     let eats = 0;
@@ -32,21 +38,23 @@ function checkNumber() {
     for (let i = 0; i < 3; i++) {
         if (guess[i] === answer[i]) {
             eats++;
-        }
-        else if (answer.includes(guess[i])) {
+        } else if (answer.includes(guess[i])) {
             bites++;
         }
     }
 
     if (eats === 3) {
-        loadsee()
+        loadsee();
         document.getElementById("result").innerText = "おめでとう！相手の数字を当てました！";
         document.body.classList.add("celebrate"); // bodyにcelebrateクラスを追加
-    }
-    else {
-        loadsee()
+    } else {
+        loadsee();
         document.getElementById("result").innerText = eats + "イート・" + bites + "バイト";
     }
+}
+
+function hasDuplicate(str) {
+    return (/([0-9]).*?\1/).test(str);
 }
 
 function convertToHalfWidth(input) {
