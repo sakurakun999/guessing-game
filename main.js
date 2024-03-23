@@ -1,3 +1,4 @@
+let input_count = 0
 let answer = generateNumber();
 
 function generateNumber() {
@@ -6,6 +7,8 @@ function generateNumber() {
     inputNumber.value = ""; // Clear the input value
     // boxリセット
     document.getElementById("result").innerText = 'Fight!';
+    // コール数リセット
+    document.getElementById("count").innerText = input_count + "コール";
     // 数値設定
     let num = "";
     while (num.length < 3) {
@@ -48,6 +51,7 @@ function checkNumber() {
         document.getElementById("result").innerText = "おめでとう！相手の数字を当てました！";
         document.body.classList.add("celebrate"); // bodyにcelebrateクラスを追加
     } else {
+        input_count = input_count + 1;
         loadsee();
         document.getElementById("result").innerText = eats + "イート・" + bites + "バイト";
     }
@@ -87,5 +91,7 @@ function loadsee() {
     }
     // 関数を呼び出して色を更新
     updateBrightness();
+
+    document.getElementById("count").innerText = input_count + "コール";
 
 }
