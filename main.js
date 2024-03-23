@@ -1,3 +1,5 @@
+let input_count = 0
+let history = [];
 let answer = generateNumber();
 
 function generateNumber() {
@@ -54,6 +56,7 @@ function checkNumber() {
         input_count = input_count + 1;
         loadsee();
         document.getElementById("result").innerText = eats + "イート・" + bites + "バイト";
+        history.push({ guess: guess, eats: eats, bites: bites }); // 現在の入力とイート・バイト数を履歴に追加
     }
 }
 
