@@ -11,6 +11,8 @@ function generateNumber() {
     // コール数リセット
     let input_count = 0
     document.getElementById("count").innerText = input_count + "コール";
+    // コール履歴リセット
+    let history = [];
     // 数値設定
     let num = "";
     while (num.length < 3) {
