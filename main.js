@@ -1,4 +1,3 @@
-let input_count = 0
 let answer = generateNumber();
 
 function generateNumber() {
@@ -8,6 +7,7 @@ function generateNumber() {
     // boxリセット
     document.getElementById("result").innerText = 'Fight!';
     // コール数リセット
+    let input_count = 0
     document.getElementById("count").innerText = input_count + "コール";
     // 数値設定
     let num = "";
